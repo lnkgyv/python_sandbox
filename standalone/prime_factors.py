@@ -34,12 +34,12 @@ def get_primes(number):
 def get_factors(number):
     print(number, ": ", end='')
 
-    if (number <= 3):
+    primes = get_primes(number)
+
+    if (number in primes):
         print(number)
 
         return
-
-    primes = get_primes(number)
 
     while (not number in primes):
         for idx in range(1, len(primes)):
